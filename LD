@@ -1,0 +1,10 @@
+from github import Github
+
+access_token = "LD"
+repo_name = "new-repository"
+
+g = Github(access_token)
+user = g.get_user()
+repo = user.create_repo(repo_name)
+
+print(f"Создан репозиторий: {repo.full_name}")
